@@ -1,0 +1,107 @@
+kpiopus.kpi
+===========
+
+Opus (http://opus-codec.org/) を再生するための KbMedia Player プラグイン
+です。対応する拡張子は .opus です。
+
+opusfile を使っているので、以下の制限があります。
+
+・Ogg コンテナに入っている Opus ファイルをサポートする
+・すべて 48kHz で出力される
+・サンプル長は 16bit のみサポートする
+・ステレオにダウンミックスされる
+
+KbMedia Player 2.51beta3 以降のタグ取得のプラグイン化に対応しています。
+開発と動作確認は 2.51beta4 および beta5 で行っています。
+対応するタグは以下のとおりです。左辺が Ogg タグ、右辺が KMP のタグです。
+
+"TITLE" => "title"
+"ARTIST" => "artist"
+"ALBUM" => "album"
+"DESCRIPTION" => "comment"
+"GENRE"=> "genre"
+"DATE" => "date"
+
+
+ライセンスについて
+------------------
+
+このプログラムには opusfile 0.5 の MinGW64 ビルドを含んでいます。
+以下のライブラリがリンクされています。
+  libogg 1.3.1
+  libopus 1.1
+  openssl 1.0.1f
+
+opusfile のライセンス表記は以下のとおりです。
+
+Copyright (c) 1994-2013 Xiph.Org Foundation and contributors
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+
+- Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
+
+- Redistributions in binary form must reproduce the above copyright
+notice, this list of conditions and the following disclaimer in the
+documentation and/or other materials provided with the distribution.
+
+- Neither the name of the Xiph.Org Foundation nor the names of its
+contributors may be used to endorse or promote products derived from
+this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION
+OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+kpiopus.kpi 自体の著作権は Autch が所有します。ライセンスは zlib ライセ
+ンスとし、著作権表記は以下のとおりです。
+
+	Copyright(c) 2014 Autch.  All rights reserved.
+
+	本ソフトウェアは「現状のまま」で、明示であるか暗黙であるかを問
+	わず、何らの保証もなく提供されます。 本ソフトウェアの使用によっ
+	て生じるいかなる損害についても、作者は一切の責任を負わないもの
+	とします。
+
+	以下の制限に従う限り、商用アプリケーションを含めて、本ソフトウェ
+	アを任意の目的に使用し、自由に改変して再頒布することをすべての
+	人に許可します。
+
+	1. 本ソフトウェアの出自について虚偽の表示をしてはなりません。あ
+	なたがオリジナルのソフトウェアを作成したと主張してはなりません。
+	あなたが本ソフトウェアを製品内で使用する場合、製品の文書に謝辞
+	を入れていただければ幸いですが、必須ではありません。
+
+	2. ソースを変更した場合は、そのことを明示しなければなりません。
+	オリジナルのソフトウェアであるという虚偽の表示をしてはなりませ
+	ん。
+
+	3. ソースの頒布物から、この表示を削除したり、表示の内容を変更し
+	たりしてはなりません。
+
+
+
+改版履歴
+--------
+
+2014.04.03 v1.0 (256)
+
+・初版
+
+
+----------------------
+Autch
+http://www.autch.net/
+http://github.com/autch
+autch@autch.net
