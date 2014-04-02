@@ -1,0 +1,23 @@
+kpiopus.kpi
+===========
+
+Opus (http://opus-codec.org/) を再生するための KbMedia Player プラグイン
+です。対応する拡張子は .opus です。
+
+opusfile を使っているので、以下の制限があります。
+
+・Ogg コンテナに入っている Opus ファイルをサポートする
+・すべて 48kHz で出力される
+・サンプル長は 16bit のみサポートする
+・ステレオにダウンミックスされる
+
+KbMedia Player 2.51beta3 以降のタグ取得のプラグイン化に対応しています。
+開発と動作確認は 2.51beta4 および beta5 で行っています。
+対応するタグは以下のとおりです。左辺が Ogg タグ、右辺が KMP のタグです。
+
+"TITLE" => "title"
+"ARTIST" => "artist"
+"ALBUM" => "album"
+"DESCRIPTION" => "comment"
+"GENRE"=> "genre"
+"DATE" => "date"
