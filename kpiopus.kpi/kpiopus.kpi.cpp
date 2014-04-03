@@ -4,7 +4,7 @@
 #include "stdafx.h"
 #include "kpiopus.kpi.h"
 
-#define KPIOPUS_VERSION   ((1 << 8) | 0)      // 1.00
+#define KPIOPUS_VERSION   ((1 << 8) | 1)      // 1.01
 #ifdef _DEBUG
 #define KPIOPUS_DESC      "Opus decoder plugin for KbMedia Player [DEBUG]"
 #else
@@ -15,9 +15,9 @@
 extern "C"
 KMPMODULE* APIENTRY kmp_GetTestModule()
 {
-  static const char* pszExts[] = { ".opus", NULL };
-  static KMPMODULE kpiModule =
-  {
+	static const char* pszExts[] = { ".opus", NULL };
+	static KMPMODULE kpiModule =
+	{
 		KMPMODULE_VERSION,		// DWORD dwVersion;
 		KPIOPUS_VERSION,    	// DWORD dwPluginVersion;
 		KPIOPUS_COPYRIGHT, 		// const char	*pszCopyright;
@@ -31,8 +31,8 @@ KMPMODULE* APIENTRY kmp_GetTestModule()
 		kpiClose,				// void (WINAPI *Close)(HKMP hKMP);
 		kpiRender,				// DWORD (WINAPI *Render)(HKMP hKMP, BYTE* Buffer, DWORD dwSize);
 		kpiSetPosition			// DWORD (WINAPI *SetPosition)(HKMP hKMP, DWORD dwPos);
-  };
-  return &kpiModule;
+	};
+	return &kpiModule;
 }
 
 extern "C"
